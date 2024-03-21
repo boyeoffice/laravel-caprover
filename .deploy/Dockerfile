@@ -26,7 +26,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 COPY composer.json composer.json
 COPY composer.lock composer.lock
 # TODO remove prestissimo when composer hits v2
-RUN composer global require hirak/prestissimo --no-plugins --no-scripts
+#RUN composer global require hirak/prestissimo --no-plugins --no-scripts
 RUN composer install --prefer-dist --no-scripts --no-dev --no-autoloader && rm -rf /root/.composer
 
 # Copy app
