@@ -35,11 +35,11 @@ COPY ./.deploy/config/php/local.ini /usr/local/etc/php/conf.d/local.ini
 RUN chmod -R 775 $LARAVEL_PATH/storage
 
 # Set any ENVs
-# ARG APP_KEY=${APP_KEY}
-# ARG APP_NAME=${APP_NAME}
-# ARG APP_URL=${APP_URL}
-# ARG APP_ENV=${APP_ENV}
-# ARG APP_DEBUG=${APP_DEBUG}
+ARG APP_KEY=${APP_KEY}
+ARG APP_NAME=${APP_NAME}
+ARG APP_URL=${APP_URL}
+ARG APP_ENV=${APP_ENV}
+ARG APP_DEBUG=${APP_DEBUG}
 
 # ARG LOG_CHANNEL=${LOG_CHANNEL}
 
